@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "google-closure-compiler --flagfile=config.conf",
+    "build": "google-closure-compiler --js=main.js --js_output_file=build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
