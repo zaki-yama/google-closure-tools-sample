@@ -1,6 +1,7 @@
 goog.provide('tutorial.notepad.Note');
 
 goog.require('goog.dom');
+goog.require('goog.ui.Zippy');
 
 tutorial.notepad.Note = function(title, content, noteContainer) {
   this.title = title;
@@ -18,6 +19,8 @@ tutorial.notepad.Note.prototype.makeNoteDom = function() {
   var newNote = goog.dom.createDom(goog.dom.TagName.DIV, null, this.headerElement, this.contentElement);
 
   goog.dom.appendChild(this.parent, newNote);
+
+  return new goog.ui.Zippy(this.headerElement, this.contentElement);
 };
 
 tutorial.notepad.makeNotes = function(data, noteContainer) {
