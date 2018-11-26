@@ -1,10 +1,7 @@
-goog.require('goog.dom');
-goog.require('goog.dom.TagName');
+goog.provide('tutorial.notepad.Note');
 
-function sayHi() {
-  var newHeader = goog.dom.createDom(
-    goog.dom.TagName.H1,
-    {'style': 'background-color:#EEE'},
-    'Hello world!');
-  goog.dom.appendChild(document.body, newHeader);
-}
+tutorial.notepad.Note = function(title, content, noteContainer) {
+  this.title = title;
+  this.content = content;
+  this.parent = noteContainer;
+};
