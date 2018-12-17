@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "google-closure-compiler --js=main.js --js_output_file=build.js",
+    "build": "google-closure-compiler --js=main.js --js_output_file=build.js --jscomp_error=checkTypes",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
